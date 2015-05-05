@@ -26,6 +26,6 @@ task :share, [:version] do |t, args|
   chdir(tmp_cookbook_folder) do
     sh "git init"
     sh "git commit -a -m 'fake repo'"
-    sh "knife community release #{name} #{version} -o .."
+    sh "knife community release -o .. #{name} #{version}"
   end
 end
